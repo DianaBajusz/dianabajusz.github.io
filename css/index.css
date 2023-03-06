@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    background-color: aliceblue;
+}
+
+.nav-area{
+    height: 50px;
+    width: 962px;
+    margin: 0 auto;
+    background-color: #555;
+}
+.nav-area ul li{
+    float: left;
+    position: relative;
+}
+.na-area ul li a {
+    padding: 16px 65px;
+    display: block;
+    transition: 0.7s;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: aqua;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+.nav-area > ul > li >a {
+    border-right: 1px solid brown;
+}
+.nav-area > ul > li:last-child > a {
+    border-right: none;
+}
+.nav-area > ul > li:hover > a {
+    background-color: blue;
+}
+.nav-area > ul > li:after > a {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom:0;
+    height: 4px;
+    width: 0;
+    background:deeppink ;
+    transition: 0.7s;
+}
+.nav-area > ul > li:before > a {
+    content: "";
+    position: absolute;
+    right: 0;
+    top:0;
+    height: 4px;
+    width: 0;
+    background:deeppink;
+    transition: 0.7s;
+}
+.nav-area ul li a:hover:before,
+.nav-area ul li a:hover::after{
+    width: 100%;
+}
+.nav-area ul li ul{
+    position: absolute;
+    background: #555;
+    width: 208px;
+    transition: 0.7s;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -25px;
+}
+.nav-area ul li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+}
+.nav-area ul li ul{
+    width: 100%;
+}
+
+.nav-area ul li ul li a{
+   font-size: 14px;
+   text-transform: capitalize;
+   padding: 15px;
+}
+.nav-area ul li ul li a{
+    font-size: 14px;
+    text-transform: capitalize;
+    padding: 15px;
+ }
